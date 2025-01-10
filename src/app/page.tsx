@@ -1,15 +1,36 @@
-import BackgroundVideo from "./UI/BackgroundVideo/BackgroundVideo"
+'use client'
 
-export default function Home() {
+import { useEffect, useState } from 'react'
+import BackgroundVideo from './UI/BackgroundVideo/BackgroundVideo'
+import Logo from './UI/Logo/Logo'
+import ChooseImmortal from './UI/ChooseImmortal/ChooseImmortal'
+
+const HomePage = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100) // Delay for fade-in
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <div className="relative min-h-screen">
-      <BackgroundVideo />
-      <div className="relative z-10">
-        {/* Your Header will automatically be rendered here via layout.tsx */}
-        <div className="flex items-center justify-center h-screen text-white">
-          <h1 className="text-5xl font-bold">Welcome to SunSpear Games</h1>
+    <>
+      <div className="relative min-h-screen">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <BackgroundVideo />
+        </div>
+
+        {/* Logo and Wishlist */}
+        <div className="relative z-10">
+          <Logo isVisible={isVisible} />
         </div>
       </div>
-    </div>
+
+      {/* Choose Immortal Section */}
+      <ChooseImmortal />
+    </>
   )
 }
+
+export default HomePage

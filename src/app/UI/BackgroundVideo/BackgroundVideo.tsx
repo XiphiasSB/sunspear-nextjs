@@ -6,7 +6,7 @@ const BackgroundVideo = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover"
       >
         Your browser does not support the video tag.
       </video>
