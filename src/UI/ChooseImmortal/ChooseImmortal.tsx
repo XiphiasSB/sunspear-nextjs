@@ -53,8 +53,6 @@ const ChooseImmortal = () => {
             </p>
         </div>
 
-
-
         {/* Thumbnails */}
         <div className="flex space-x-4">
           {thumbnails.map((thumbnail) => (

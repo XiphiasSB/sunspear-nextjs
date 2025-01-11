@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import BackgroundVideo from './UI/BackgroundVideo/BackgroundVideo'
-import Logo from './UI/Logo/Logo'
-import ChooseImmortal from './UI/ChooseImmortal/ChooseImmortal'
-import ScrollDownBtn from './UI/ScrollDownBtn/ScrollDownBtn'
+import BackgroundVideo from '@/UI/BackgroundVideo/BackgroundVideo'
+import Logo from '@/UI/Logo/Logo'
+import ChooseImmortal from '@/UI/ChooseImmortal/ChooseImmortal'
+import ScrollDownBtn from '@/UI/ScrollDownBtn/ScrollDownBtn'
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false)
