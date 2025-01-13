@@ -9,6 +9,7 @@ const BackgroundVideo = () => {
         loop
         muted
         playsInline
+        preload="auto" // Preloads video for faster playback
         className="
           absolute
           top-0
@@ -19,7 +20,10 @@ const BackgroundVideo = () => {
           object-top
           pointer-events-none
         "
-      />
+      >
+        {/* Fallback text for unsupported browsers */}
+        Your browser does not support the video tag.
+      </video>
     </div>
   )
 }

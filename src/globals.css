@@ -17,19 +17,32 @@
 @font-face {
   font-family: 'Gotham';
   src: url('/fonts/gotham/GothamNarrow-Light.otf') format('opentype');
-  font-weight: 300;
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/gotham/Gotham-Medium.otf') format('opentype');
+  font-weight: 600; /* Semi-Bold */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('/fonts/gotham/Gotham-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: bold;
+  font-weight: 700; /* Bold */
+  font-style: normal;
 }
+
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "gotham", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  letter-spacing: 0.10em;
+}
+
+strong, b {
+  letter-spacing: 0.10em; /* Ensure bold text respects letter-spacing */
 }

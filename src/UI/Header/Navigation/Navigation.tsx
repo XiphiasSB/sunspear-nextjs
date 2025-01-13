@@ -62,7 +62,7 @@ const Navigation = () => {
                 onClick={() => setMenuOpen(false)}
                 className={`block text-lg uppercase ${
                   pathname === item.href
-                    ? 'text-[#A28654] font-semibold' // Gold color for active page
+                    ? 'text-[#A28654]' // Gold color for active page
                     : 'text-gray-400 hover:text-white'
                 } transition-colors duration-300`}
               >
@@ -75,23 +75,24 @@ const Navigation = () => {
 
       {/* Desktop Navigation */}
       <nav className="hidden lg:block">
-        <ul className="flex space-x-4 uppercase">
+        <ul className="flex uppercase">
           {navItems.map((item) => (
-            <li key={item.href}>
+            <li key={item.href} className="px-2"> {/* Add horizontal padding */}
               <Link
                 href={item.href}
                 className={`text-lg ${
                   pathname === item.href
-                    ? 'text-[#A28654] font-semibold' // Gold color for active page
+                    ? 'text-[#A28654]' // Gold color for active page
                     : 'text-gray-400 hover:text-white'
-                } transition-colors duration-300`}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+              } transition-colors duration-300`}
+            >
+          {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</nav>
+
     </>
   )
 }

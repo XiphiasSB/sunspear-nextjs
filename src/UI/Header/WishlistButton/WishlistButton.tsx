@@ -14,7 +14,7 @@ const WishlistButton = () => {
         className="w-6 h-6 text-[#144E81]" // Blue tint for the icon
         style={{ filter: 'brightness(0) saturate(100%) invert(24%) sepia(20%) saturate(1911%) hue-rotate(171deg) brightness(92%) contrast(85%)' }}
       />
-      <span className="uppercase text-sm tracking-wide">Wishlist on Steam</span>
+      <span className="hidden sm:inline uppercase text-sm tracking-wide">Wishlist on Steam</span>
     </a>
   )
 }
