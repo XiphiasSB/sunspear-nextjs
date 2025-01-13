@@ -16,25 +16,18 @@ const HomePage = () => {
 
   return (
     <>
-      {/* 1) Fullscreen "hero" section */}
       <div className="relative h-screen"> 
-        {/* Video behind everything */}
         <BackgroundVideo /> 
       
-        {/* Logo on top */}
         <div className="relative z-10">
           <Logo isVisible={isVisible} />
         </div>
 
-        {/* The scroll-down button also inside this hero section,
-            pinned to bottom-8, so it’s at the bottom of the screen. */}
         <ScrollDownBtn
           targetId="choose-immortal"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
         />
       </div>
-
-      {/* 2) Next section starts below */}
       <ChooseImmortal />
     </>
   )
